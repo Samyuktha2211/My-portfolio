@@ -12,61 +12,77 @@
   --card-color: #1e1e1e;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
+  height: 100vh;
   background-color: var(--bg-color);
   color: var(--text-color);
   font-family: 'Segoe UI', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 0;
 }
 
 .profile-container {
   text-align: center;
   background: var(--card-color);
   padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  max-width: 400px;
+  width: 100%;
 }
 
 .profile-pic {
   width: 150px;
   height: 150px;
-  border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 1rem;
+  border-radius: 50%;
   border: 3px solid var(--link-color);
+  margin-bottom: 1rem;
 }
 
 h1 {
-  margin: 0.5rem 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+}
+
+p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
 }
 
 .social-links {
-  margin-top: 1rem;
   display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
 }
 
 .social-links a {
   text-decoration: none;
   color: var(--link-color);
-  font-weight: bold;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: var(--text-color);
 }
 
 #theme-toggle {
-  margin-top: 2rem;
-  padding: 0.5rem 1rem;
-  border: none;
-  background-color: var(--link-color);
-  color: #fff;
-  border-radius: 5px;
-  cursor: pointer;
+  padding: 0.5rem 1.2rem;
   font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--link-color);
+  color: white;
+  cursor: pointer;
 }
 
 #theme-toggle:hover {
